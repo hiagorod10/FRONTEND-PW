@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <title>Lubrificantes HS</title>
+</head>
+<body>
+  <header>
+    <div class="foreground">
+      <div class="top-container">
+        <h1>Lubrificantes HS</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="produtos-create.html">Novo Produto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h1>Cadastrar Produtos</h1>
+      <div>
+        <form>
+          <div>
+            <label for="nome">NOME DO PRODUTO</label>
+            <input type="text" name="nome" id="nome">
+          </div>
+          <div>
+            <label for="descricao">DESCRIÇÃO DO PRODUTOS</label>
+            <textarea name="descricao" id="descricao"></textarea>
+          </div>
+          <div>
+            <label for="imagem">IMAGEM</label>
+            <input type="file" name="imagem" id="imagem">
+          </div>
+          <div>
+            <label for="fabricante">FORNECEDORES</label>
+            <select name="fabricantes_id" id="fabricante"></select>
+          </div>
+          <div>
+            <input type="submit" class="btn_create">
+          </div>                       
+        </form>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; Todos os direitos reservados.</p>
+  </footer>
+  <script src="./assets/js/produtos-create.js"></script>
+</body>
+</html>
