@@ -1,7 +1,7 @@
 const section = document.querySelector("main section");
 
 const fetchData = async () => {
-  const result = await fetch("http://localhost:8080/produtos");
+  const result = await fetch("https://api-pw-hs.herokuapp.com//produtos");
   const produtos = await result.json();
   produtos.forEach((produto) => {
     section.innerHTML += `

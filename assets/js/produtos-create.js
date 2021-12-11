@@ -1,4 +1,4 @@
-const fabrincantesSelect = document.querySelector("#fabricante");
+const fornecedoresSelect = document.querySelector("#fornecedor");
 const form = document.querySelector("form");
 
 form.addEventListener("submit", async (event) => {
@@ -8,7 +8,7 @@ form.addEventListener("submit", async (event) => {
   const options = { method: "post", body: formData };
 
   const response = await fetch(
-    "http://localhost:8080/produtos",
+    "https://api-pw-hs.herokuapp.com//produtos",
     options
   );
 
@@ -21,15 +21,15 @@ form.addEventListener("submit", async (event) => {
   }
 });
 
-async function getFabricantes() {
+async function getfornecedores() {
   const response = await fetch(
-    "http://localhost:8080/fornecedores"
+    "https://api-pw-hs.herokuapp.com//fornecedores"
   );
-  const fabricantes = await response.json();
+  const fornecedores = await response.json();
 
-  fabricantes.forEach((fabricante) => {
-    fabrincantesSelect.innerHTML += `<option value="${fabricante.id}">${fabricante.nome}</option>`;
+  fornecedores.forEach((fornecedor) => {
+    fornecedoresSelect.innerHTML += `<option value="${fornecedor.id}">${fornecedor.nome}</option>`;
   });
 }
 
-getFabricantes();
+getFornecedors();
